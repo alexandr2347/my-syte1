@@ -9,10 +9,11 @@ body{
 .header{
     padding: 5px 5px;
     display: flex;
-    color: #0f2197;
+    background: #1a0625;
     width: 100%;
     justify-content: space-between;
     align-items: flex-start;
+    border-bottom: 1px solid #080d13;
 
 }
 .header__nav-list{
@@ -42,8 +43,27 @@ h3{
 p{
     color: #ece7e7;
 }
+.list{
+    list-style: none;
+    padding: 0;
+}
 li{
     color: #ece7e7;
+}
+.list1{
+    color: #ece7e7;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+.list1::before{
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 3px;
+    background: #561778;
+    border-radius: 2px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 .scills{
     display: flex;
@@ -77,14 +97,33 @@ li{
     background: #0c131d;
 }
 .section{
-    background-image: linear-gradient(#282c47,#0c131d,#080d13);
+    background-image: linear-gradient(#1a0625, #110d1c, #080d13);
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 50px;
-    padding: 50px;
-    border-bottom: 1px solid #3b3c4e;
+    padding: 20px;
 
 
+
+
+}
+.header__nav-dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background: #111820;
+    border: 1px solid #1c2530;
+    border-radius: 8px;
+    padding: 8px 0;
+    margin-top: 6px;
+    list-style: none;
+    z-index: 100;
+}
+.has-dropdown{
+    position: relative;
+    cursor: pointer;
 }
 .logo{
     text-align: left;
